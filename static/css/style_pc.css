@@ -1,0 +1,2047 @@
+@charset "UTF-8";
+/* function */
+/* function End */
+/* base-css */
+/* 重設實際寬高 */
+@media screen and (min-width: 581px ){
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: black;
+  font-size: 1em;
+  font-family: 'RalewayMedium';
+  min-height: 100%;
+}
+
+/* custom font */
+@font-face {
+  font-family : 'RalewayMedium';
+  src : url('~/resources/Raleway-Medium.ttf');
+}
+@font-face {
+  font-family : 'AvenirMedium';
+  src : url('~/resources/Avenir/AvenirLTStd-Roman.otf');
+}
+@font-face {
+  font-family : 'AvenirBook';
+  src : url('~/resources/Avenir/AvenirLTStd-Book.otf');
+}
+@font-face {
+  font-family : 'AvenirLight';
+  src : url('~/resources/Avenir/AvenirLTStd-Light.otf');
+}
+@font-face {
+  font-family : 'FuturaBTMedium';
+  src : url('~/resources/Futura/futura medium bt.ttf');
+}
+@font-face {
+  font-family : 'FuturaBTLight';
+  src : url('~/resources/Futura/futura light bt.ttf');
+}
+@font-face {
+  font-family : 'FuturaBTBook';
+  src : url('~/resources/Futura/Futura Book font.ttf');
+}
+
+/* 清除浮動 */
+.clear {
+  zoom: 1;
+}
+.clear:before, .clear:after {
+  display: block;
+  content: '';
+}
+.clear:after {
+  clear: both;
+}
+
+/* 重設實際寬高 End */
+/* 文字樣式 */
+/* 字體大小 */
+.font_12 {
+  font-size: 0.75em;
+}
+
+.font_16 {
+  font-size: 1em;
+}
+
+.font_24 {
+  font-size: 1.5em;
+}
+
+.font_32 {
+  font-size: 2em;
+}
+
+/* 字體粗細 */
+.font_bold, .nav .nav_bottom .nav_menu li a:hover, .nav .nav_bottom .nav_menu li .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .nav .nav_bottom .nav_menu li a:hover, .nav .nav_bottom .nav_menu li a.current {
+  font-weight: bold;
+}
+
+.font_normal {
+  font-weight: normal;
+}
+
+/* 字體顏色 */
+.error, .red, .orderForm.red a, .orderForm.red .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .orderForm.red a:hover {
+  color: #ed2123;
+}
+
+.green, .orderForm.green a, .orderForm.green .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .orderForm.green a:hover {
+  color: #00aa00;
+}
+
+/* 全站超連結樣式 */
+a, a:hover, .charting .chart.data .chart_menu a:hover {
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+/* 表單文字 */
+label.error {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff;
+  font-size: 0.75em;
+  line-height: 1.2;
+  text-align: left;
+  min-height: 30px;
+}
+
+/* 訊息框 */
+.confirmAlert {
+  display: none;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-style: solid;
+  border-color: #b3b3b3;
+  border-width: 1px;
+  background-color: #ece7d7;
+}
+
+/* 文字樣式 End */
+/* 按鈕樣式 */
+.btn {
+  padding: 5px 20px;
+  border: 1px solid #ee9e05;
+  width: 140px;
+  line-height: 35px;
+}
+.btn.blue {
+  border-radius: 7px;
+  font-size: 1.5em;
+  font-family: 'AvenirLight';
+  background-color: white;
+  color: black;
+}
+.btn.blue:hover {
+  background-color: #ee9e05;
+  color: white;
+}
+.btn.gray {
+  background-color: #848484;
+}
+.btn.error {
+  background-color: #f8d6d6;
+}
+
+a.btn, .charting .chart.data .chart_menu a.btn:hover {
+  display: inline-block;
+}
+a.btn.blue, .charting .chart.data .chart_menu a.btn.blue:hover {
+  margin: 15px 0;
+}
+
+/* 按鈕樣式 End */
+/* 表單樣式 */
+textarea, select, input {
+  font-size: 1em;
+}
+
+textarea {
+  padding: 15px !important;
+  resize: none;
+  text-align: left;
+}
+
+input[type="checkbox"], input[type="submit"] {
+  cursor: pointer;
+  width: initial;
+  width: inherit;
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  text-align: left;
+  width: 80%;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+}
+
+input[type="submit"] {
+  text-align: center;
+  width: 40%;
+}
+
+/* 必填樣式 */
+input[type="text"].hidden {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  height: 0;
+}
+input[type="text"].hidden ~ label.error {
+  margin-top: 0;
+}
+input[type="text"].hidden ~ label.error ~ .dropdown, input[type="text"].hidden ~ label.error ~ .dropdown * {
+  color: #ed2123;
+  background-color: #f8d6d6;
+}
+input[type="text"].hidden ~ label.error ~ .dropdown {
+  -webkit-border-radius: 16px;
+  border-radius: 16px;
+}
+
+/* 必填樣式 End */
+/* 表單樣式 End */
+/* 對齊 */
+.float_l {
+  float: left;
+}
+
+.float_r {
+  float: right;
+}
+
+/* 對齊 End */
+/* 限制最大寬度 */
+.content {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.main {
+  overflow: hidden;
+  padding: 15px;
+}
+
+/* base-css End */
+/* base-css */
+/* 分享按鈕 */
+.shareIcon li {
+
+  float: left;
+  margin-left: 15px;
+}
+.shareIcon li .icon {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+}
+.shareIcon li .share_01 {
+  background-image: url(../img/youtube.png);
+}
+.shareIcon li .share_02 {
+  background-image: url(../img/fb.png);
+}
+.shareIcon li .share_03 {
+  background-image: url(../img/ig.png);
+}
+.shareIcon li .share_04 {
+  background-image: url(../img/twitter.png);
+}
+
+/* 分享按鈕 End */
+/* 下拉選單 */
+.acct {
+  min-height: 40px;
+  margin-top: 40px;
+}
+
+.acct, .dropdown {
+  position: relative;
+}
+
+.dropdown input {
+  margin: 0;
+}
+
+/* acct */
+.drop_acct {
+  margin: 15px 0;
+  padding-left: 3px;
+  padding-right: 3px;
+  text-align: left;
+
+}
+.drop_acct .btn {
+  border-style: solid;
+  border-color: #b3b3b3;
+  border-width: 1px;
+  background-color: #fff;
+  line-height: 1.5;
+}
+.drop_acct .dropdownTog {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  line-height: 33px;
+  color: #CCCCCC;
+}
+.drop_acct .dropdownSel {
+  display: none;
+  position: absolute;
+  border-radius: 4px;
+  top: 0;
+  left: 0;
+  padding: 30px 15px;
+  text-align: left;
+  width: 100%;
+}
+.drop_acct .dropdownSel li {
+  color: #4a4a4a;
+  background-color: white;
+  font-size: 0.8em;
+  font-family: 'AvenirLight';
+}
+.drop_acct .dropdownSel li a, .drop_acct .dropdownSel li .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .drop_acct .dropdownSel li a:hover {
+  overflow: hidden;
+  border-style: solid;
+  border-color: #b3b3b3;
+  border-top-width: 1px;
+  line-height: 2;
+  text-indent: 5px;
+}
+.drop_acct .dropdownSel li a span, .drop_acct .dropdownSel li .charting .chart.data .chart_menu a:hover span, .charting .chart.data .chart_menu .drop_acct .dropdownSel li a:hover span {
+  float: left;
+}
+.drop_acct .dropdownSel li a span:first-child, .drop_acct .dropdownSel li .charting .chart.data .chart_menu a:hover span:first-child, .charting .chart.data .chart_menu .drop_acct .dropdownSel li a:hover span:first-child {
+  border-style: solid;
+  border-color: #b3b3b3;
+  border-right-width: 1px;
+}
+.drop_acct .dropdownSel li.pageAcct {
+  border-style: solid;
+  border-color: #b3b3b3;
+  border-top-width: 1px;
+  text-align: center;
+}
+.drop_acct .dropdownSel li.pageAcct a, .drop_acct .dropdownSel li.pageAcct .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .drop_acct .dropdownSel li.pageAcct a:hover {
+  display: inline-block;
+  margin-bottom: -25px;
+  padding: 5px;
+  border: none;
+}
+
+/* acct End */
+/* 貨幣+國家 */
+.drop_asse {
+  display: block;
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+  padding-left: 20px;
+  border-style: solid;
+  border-color: #b3b3b3;
+  border-width: 1px;
+  background-color: #fff;
+  line-height: 1.5;
+  text-align: left;
+}
+.drop_asse a, .drop_asse .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .drop_asse a:hover {
+  display: block;
+}
+.drop_asse.search .dropWrap input {
+  padding-right: 5px;
+  width: 100%;
+}
+.drop_asse.search .dropWrap i {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: #888;
+}
+.drop_asse.search .dropMenu {
+  max-height: 240px;
+}
+.drop_asse.currency .dropWrap .dropInput ~ .dropToggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 10px;
+  line-height: 30px;
+  border-style: solid;
+  border-color: #b3b3b3;
+  border-left-width: 1px;
+  width: inherit;
+}
+.drop_asse.currency .dropWrap label.error {
+  opacity: 0;
+}
+.drop_asse.currency .dropMenu {
+  text-indent: 20px;
+  max-height: 180px;
+}
+.drop_asse.currency .dropMenu li {
+  border-style: solid;
+  border-color: #b3b3b3;
+  border-bottom-width: 1px;
+}
+.drop_asse .dropMenu {
+  overflow-y: scroll;
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  margin-bottom: 15px;
+  border-style: solid;
+  border-color: #b3b3b3;
+  border-top-width: 1px;
+  text-indent: 10px;
+  line-height: 30px;
+  min-height: 30px;
+  width: 100%;
+}
+.drop_asse .dropMenu li:hover {
+  cursor: pointer;
+  background-color: #9a7c2f;
+}
+.drop_asse .dropMenu.europe li:hover {
+  background-color: #00aeef;
+}
+
+/* 貨幣+國家 End */
+/* 下拉選單 End */
+/* 表格 */
+table, .liveTable .live.data table {
+  /*border-style: solid;
+  border-color: #b3b3b3;
+  border-width: 1px;
+  line-height: 2;*/
+}
+table tr, .liveTable .live.data table tr {
+  height: 50px;
+}
+table tr:first-child, .liveTable .live.data table tr:first-child {
+  background-color: #ebfcfb !important;
+  font-size: 20px;
+}
+.liveTable .live.data table tr:nth-child(even), .trade_table table tr:nth-child(even) {
+  background-color: white;
+}
+.liveTable .live.data table tr:nth-child(odd), .trade_table table tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+table tr:not(:first-child) td, .liveTable .live.data table tr:not(:first-child) td {
+  border-style: solid;
+  border-color: #c8c6c6;
+  border-bottom-width: 1px;
+  font-family: 'FuturaBTLight';
+}
+table tr td, .liveTable .live.data table tr td {
+  padding: 0 5px;
+  vertical-align: middle;
+}
+table tr td:nth-child(odd), .liveTable .live.data table tr td:nth-child(odd) {
+  margin: 0 10px;
+}
+.live.data table tr td {
+  font-family: 'AvenirBook';
+  font-size: 16px;
+  font-weight: 300;
+}
+.liveTrades {
+  text-align: center;
+}
+
+/* 表格 End */
+/* 背景圖 */
+.cw_bg {
+  background-position: bottom center;
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+}
+
+/* 背景圖 End */
+/* base-css End */
+/* 登入 */
+.login {
+  display: table;
+  padding: 30px 0;
+  background-color: #929292;
+  min-height: 351px;
+  width: 100%;
+}
+.login .loginBox {
+  display: table-cell;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+  height: 351px;
+  width: 400px;
+}
+.login .loginBox .login_wrap {
+  padding: 15px;
+  background-color: #f2f2f2;
+}
+.login .loginBox .login_wrap *:not(.error) {
+  margin: 15px auto;
+}
+.login .loginBox .login_wrap .login_term {
+  text-align: center;
+  font-size: 0.75em;
+  line-height: 1.5;
+}
+.login .loginBox .login_wrap .login_term * {
+  margin: 0;
+  vertical-align: middle;
+}
+.login .loginBox .login_wrap .login_term a, .login .loginBox .login_wrap .login_term .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .login .loginBox .login_wrap .login_term a:hover {
+  display: inline-block;
+  color: #00aeef;
+}
+.login .acct {
+  width: 80%;
+}
+.login .acct label.error, .login .acct input {
+  width: 100%;
+}
+
+/* 登入 End */
+/* header */
+.header{
+  background-color: white;
+  color: black;
+  height: 120px;
+}
+.header::before {
+  content: "";
+  left:0;
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  background-color: #efefef;
+}
+.header h2, .footer h2 {
+  text-indent: -99999px;
+  height: 0;
+}
+.header a, .header .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .header a:hover, .footer a, .footer .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .footer a:hover {
+  color: black;
+}
+
+.nav {
+  position: relative;
+}
+.nav a, .nav .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .nav a:hover {
+  display: block;
+}
+
+.nav_top .nav_setting > li {
+  font-size: 0.75em;
+  float: left;
+  padding: 0 10px;
+}
+
+.sub_lang, .sub_acct {
+  display: none;
+  position: absolute;
+  top: 15px;
+  z-index: 1;
+  background-color: white;
+  border: 1px solid #9b9b9b;
+  border-radius: 4px;
+}
+.sub_lang li, .sub_acct li {
+  float: none;
+  padding: 5px;
+}
+
+.nav_acct {
+  text-align: center;
+}
+.nav_acct .main_acct {
+  padding: 0 3px;
+}
+
+/* header End */
+/* footer */
+.footer {
+  background-color: #636262;
+  overflow: hidden;
+}
+.footer .nav_logo {
+  width: 152px;
+  height: 60px;
+  display: inline-block;
+  background-size: cover;
+  background-image: url('../img/logo_w.png');
+}
+.footer .nav_logo img {
+  height: 32px;
+  display: none;
+}
+.footer .nav_share {
+  float: right;
+  margin-top: 10px;
+  margin-left: 35px;
+}
+.footer .nav_share, .footer .nav_sub {
+  line-height: 32px;
+}
+.footer .nav_sub {
+  float: right;
+  margin-right: 40px;
+}
+.footer .nav_sub .subnav_menu > li {
+  float: left;
+  padding: 0 15px;
+}
+.footer .nav_sub .subnav_menu > li > span{
+  font-family: 'AvenirMedium';
+  letter-spacing: 1.2px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 22px;
+}
+.footer .nav_sub .subnav_menu > li > ul{
+  font-family: 'AvenirLight';
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+.footer .nav_sub .subnav_menu > li > ul > li > a{
+  color: #ffffff !important;
+}
+.footer .copyright {
+  display: block;
+  color: #ac903e;
+}
+
+/* footer End */
+/* warpper*/
+.wrapper {
+  min-height: 100%;
+}
+.wrapper > div {
+  width: 70%;
+  margin: 50px auto 0 auto;
+}
+.wrapper .banner {
+  width: 100%;
+}
+/* acct dropdown */
+.wrap_nav_acct {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 0.75em;
+}
+.wrap_nav_acct .nav_top {
+  display: inline-block;
+  margin: 0 auto;
+}
+.wrap_nav_acct .nav_top > li {
+  float: left;
+  margin: 0 5px;
+}
+.wrap_nav_acct .nav_top > li a, .wrap_nav_acct .nav_top > li .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .wrap_nav_acct .nav_top > li a:hover {
+  display: inline-block;
+}
+.wrap_nav_acct .nav_acct {
+  text-align: left;
+}
+.wrap_nav_acct .nav_acct .main_acct {
+  padding: 0 3px;
+}
+.wrap_nav_acct .nav_acct .sub_acct {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  padding-top: 20px;
+}
+.wrap_nav_acct .nav_acct .sub_acct li {
+  background-color: #f2f2f2;
+}
+
+/* trade bid */
+.tradeBid, .assetsOverview, .accountStatus, .supportLost{
+  border-radius: 8px 0px 0px 8px;
+}
+.tradeSm, .assetsWith, .accountLog, .supportOther{
+  border-radius: 0px 8px 8px 0px;
+}
+
+/* acct dropdown End */
+/* tabs setting */
+.tabsMenu {
+  border-color: #b3b3b3;
+  border-width: 1px;
+  border-radius: 5px;
+  width: 60%;
+  margin: 40px auto 5px;
+}
+.tabsMenu li {
+  font-family: 'AvenirMedium';
+  float: left;
+  padding: 10px 0;
+  margin-right: 1%;
+  border-right-width: 1px;
+  background-color: #f9f0e0;
+  line-height: 1.5;
+  text-align: center;
+  width: 24%;
+}
+.tabsMenu li:hover, .tabsMenu li:active, .tabsMenu li.current {
+  cursor: pointer;
+  background-color: #ee9e05;
+}
+.tabsMenu li:hover a, .tabsMenu li:hover .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .tabsMenu li:hover a:hover, .tabsMenu li:active a, .tabsMenu li:active .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .tabsMenu li:active a:hover, .tabsMenu li.current a, .tabsMenu li.current .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .tabsMenu li.current a:hover {
+  display: inline-block;
+  color: #fff;
+}
+.tabsMenu li:last-child {
+  border-right-width: 0;
+}
+
+.tabsWrap {
+  padding: 15px;
+}
+
+.tabsTable {
+  font-size: 1em;
+}
+.tabsTable h2 {
+  padding: 15px 0;
+}
+.tabsTable table, .tabsTable .liveTable .live.data table, .liveTable .live.data .tabsTable table {
+  text-align: center;
+  width: 100%;
+}
+.tabsTable table td:not(:first-child), .tabsTable .liveTable .live.data table td:not(:first-child), .liveTable .live.data .tabsTable table td:not(:first-child) {
+  /*border-style: solid;
+  border-color: #b3b3b3;
+  border-left-width: 1px;*/
+}
+
+/* tabs setting End */
+/* order form */
+.bgGray, .orderForm.bgGray td {
+  background-color: #848484;
+}
+
+/* order form End */
+/* index */
+.banner {
+  background-color: #848484;
+  color: white;
+  text-align: center;
+  height: 100vmin;
+}
+.banner .content {
+  display: table;
+  height: 100vmin;
+}
+.banner .content .main {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner .hgroup {
+  padding: 10px 0;
+  text-align: center;
+  line-height: 1.5;
+}
+.banner .hgroup:after {
+  display: block;
+  content: '';
+  margin: 10px auto;
+  background-color: #fff;
+  height: 1px;
+  width: 100%;
+}
+.banner .btn_setting {
+  display: inline-block;
+}
+.banner .btn_setting li {
+  float: left;
+}
+.banner .btn_setting li:first-child {
+  margin-right: 10px;
+}
+
+.describe {
+  color: black;
+}
+.describe .des {
+  overflow: hidden;
+  line-height: 1.5;
+  min-width: 150px;
+}
+.describe .des .des_img {
+  margin: 0 auto;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  height: 160px;
+  width: 150px;
+}
+.describe .des .des_01 {
+  background-image: url('../img/risk.png');
+}
+.describe .des .des_02 {
+  background-image: url('../img/easy.png');
+}
+.describe .des .des_03 {
+  background-image: url('../img/secure.png');
+}
+.describe .des .des_title {
+  text-align: center;
+  line-height: 2;
+  font-size: 1.5em;
+  font-family: 'AvenirMedium';
+}
+.describe .des .des_txt {
+  font-family: 'AvenirLight';
+  font-size: 1em;
+  font-weight: 300;
+  text-align: justify;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.marketView .market.data {
+  padding: 15px 0;
+}
+.marketView .market.data dt.font_12 h2:after {
+  display: inline-block;
+  content: ':';
+}
+
+.liveTable {
+  margin-bottom: 60px;
+}
+.liveTable .content {
+  width: 100%;
+}
+.liveTable .live.data {
+  font-size: 1em;
+}
+.liveTable .live.data h1 {
+  display: inline-block;
+  padding: 5px 20px 5px 0px;
+  color: #000;
+  line-height: 1.5;
+  font-family: 'AvenirMedium';
+}
+.liveTable .live.data h1 ~ span {
+  float: right;
+  padding: 5px 0;
+  line-height: 1.5;
+  text-align: right;
+  font-size: 1.03125em;
+}
+
+
+.newsList {
+  overflow: hidden;
+  margin-top: 50px !important;
+}
+.newsList .content {
+  width: 100%;
+}
+.newsList .news.data {
+  margin: 20px 0;
+}
+.newsList .news.data .news_list {
+  height: 165px;
+  border: solid 0.5px #CCCCCC;
+  padding: 35px;
+}
+.newsList .news.data .news_link {
+  display: block;
+}
+.newsList .news.data .news_link h3 {
+  font-size: 0.875em;
+}
+.newsList .news.data .news_link h1 {
+  font-size: 1.25em;
+}
+.newsList .news.data .news_link div{
+  width: 60%;
+  float: left;
+  height: 103px;
+  overflow: hidden;
+}
+.newsList .news.data .news_link div h1 {
+  font-family: 'AvenirMedium';
+  font-size: 1.3em;
+}
+.newsList .news.data .news_link div span {
+  font-family: 'AvenirLight';
+}
+
+#form_bid span, #form_BuyFromMarket span, #form_sell span, #form_sellFromMarket span{
+  font-size: 16px;
+  color: #4a4a4a;
+}
+#form_setNotification li:nth-child(even) {
+  background-color: white;
+}
+#form_setNotification li:nth-child(even) {
+  background-color: #fafafa;
+}
+/* index End */
+/* trade */
+.trade .tradeFee {
+  width: 40%;
+  margin: 45px auto;
+}
+.trade .tradeFee p {
+  display: inline;
+  margin: 0 5% 0 5%;
+  font-size: 1rem;
+}
+.trade .tradeCalc {
+  text-align: center;
+}
+.trade .tradeUnit {
+  display: inline-block;
+  position: relative;
+  min-height: 40px;
+}
+.trade .tradeUnit .borderInput {
+  padding-right: 50px !important;
+  border: 0.6px solid #9b9b9b;
+  border-radius: 4px;
+  text-align: left;
+  width: 100%;
+}
+.trade .tradeUnit .borderInput::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #CCCCCC;
+}
+.trade .tradeUnit .borderInput::-moz-placeholder { /* Firefox 19+ */
+  color: #CCCCCC;
+}
+.trade .tradeUnit .borderInput:-ms-input-placeholder { /* IE 10+ */
+  color: #CCCCCC;
+}
+.trade .tradeUnit .borderInput:-moz-placeholder { /* Firefox 18- */
+  color: #CCCCCC;
+}
+.trade .tradeUnit .unit {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  margin: 6px auto;
+  padding: 2px 3px;
+  font-size: 0.75em;
+}
+.trade .tabsTable {
+  font-size: 1em;
+}
+.trade .tabsTable h2 {
+  padding: 15px 0;
+}
+.trade .tabsTable table, .trade .tabsTable .liveTable .live.data table, .liveTable .live.data .trade .tabsTable table {
+  background-color: #fff;
+  width: 100%;
+}
+.trade .tabsTable table td:not(:first-child) {
+
+}
+
+/* trade End */
+/* assets, account form */
+.assetsForm {
+  overflow: hidden;
+}
+.assetsForm > li {
+  position: relative;
+  margin-top: 30px;
+}
+.assetsForm > li label {
+  display: inline-block;
+  line-height: 2;
+  text-align: left;
+  font-family: 'AvenirLight';
+  font-size: 1.2em;
+}
+.assetsForm > li label ~ .btn {
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  width: 55%;
+  height: 33px;
+  float: right;
+}
+.assetsForm > li:not(.clear) label {
+  padding-right: 5px;
+}
+
+/* assets, account form End */
+/* 各頁共用設定 */
+.assets .content, .account .content, .support .content {
+  margin: 30px auto;
+}
+.assets .content {
+  margin-bottom: 50px !important;
+  width: 100%;
+}
+.assets .content > span {
+  border: solid 0.5px #ee9e05;
+  background-color: #f9f0e0;
+  border-radius: 4px;
+  font-family: 'FuturaBTLight';
+  font-size: 1.1em;
+  padding: 18px;
+}
+
+.assets .content > span, .account .content > span, .support .content > span {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+  line-height: 1.5;
+  font-family: 'AvenirBook';
+  font-size: 1.2em;
+}
+.assets .main, .account .main, .support .main {
+  padding: 5px 15px 15px 15px;
+  text-align: center;
+}
+.account .main {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.assets .tabsWrap, .account .tabsWrap, .support .tabsWrap {
+  padding: 0;
+  border-width: 0;
+}
+.assets .tabsTable table tr:first-child, .account .tabsTable table tr:first-child, .support .tabsTable table tr:first-child {
+  font-size: 1.375em;
+}
+.assets .tabsTable table tr:first-child td, .support .tabsTable table tr:first-child td {
+  background-color: #f9f0e0 !important;
+}
+.assets .tabsTable table tr:first-child:nth-child(2) td, .account .tabsTable table tr:first-child:nth-child(2) td, .support .tabsTable table tr:first-child:nth-child(2) td {
+  background-color: #dcd1b3;
+}
+.assets .tabsTable table tr:nth-child(2) {
+  font-family: 'AvenirMedium' !important;
+  font-size: 1.2em;
+}
+.assets .tabsTable table tr:nth-of-type(2) ~ tr {
+  font-family: 'FuturaBTLight';
+  font-size: 1em;
+}
+.assets .tabsTable table tr:nth-child(even) td {
+  background-color: white;
+}
+.assets .tabsTable table tr:nth-child(odd) td {
+  background-color: #fafafa;
+}
+.account .tabsTable table tr:first-child td {
+  background-color: white !important;
+  font-size: 1em !important;
+  font-family: 'AvenirMedium' !important;
+}
+.account .tabsTable table tr:nth-child(odd) td {
+  border-bottom: 1px solid #c9c6c6;
+  background-color: white;
+  font-size: 1.2em;
+  font-family: 'FuturaBTLight';
+}
+.account .tabsTable table tr:nth-child(even) td {
+  border-bottom: 1px solid #c9c6c6;
+  background-color: #fafafa;
+  font-size: 1.2em;
+  font-family: 'FuturaBTLight';
+}
+.account .tabsTable .title, .support .tabsTable .title {
+  background-color: #f9f0e0;
+  text-align: center;
+  line-height: 2.5em;
+  font-size: 1.3em;
+}
+.accountStatusPro, .accountStatusLv {
+  margin-top: 73px;
+}
+.accountVerifiEmail, .accountVerifiAcct {
+  margin-top: 50px;
+}
+
+/* 各頁共用設定 End */
+/* assets */
+.assets .assetsForm > li.clear {
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+}
+.assets .assetsForm > li.clear > * {
+  float: none;
+  width: 100%;
+}
+.assets .assetsForm > li.clear > textarea {
+  height: 160px;
+}
+.assets .assetsDep .content {
+  width: 85%;
+}
+.assets .assetsWith .tabsMenu li {
+  width: 49%;
+}
+.assets .assetsWith .tabsMenu {
+  margin-top: 60px;
+  width: 50%;
+
+}
+.assets .assetsWith .tabsWrap {
+  margin: 0 auto;
+  width: 75%;
+}
+.assets .orderMag a, .assets .orderMag .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .assets .orderMag a:hover, .assets .orderMsg a, .assets .orderMsg .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .assets .orderMsg a:hover {
+  display: inline-block;
+}
+
+/* assets End */
+/* account */
+.account .assetsForm > li {
+  width: 100%;
+}
+.account .assetsForm > li:last-child {
+  padding-bottom: 10px;
+}
+.account .assetsForm > li:last-child label:not(.error) {
+  width: 10%;
+}
+.account .assetsForm > li:last-child label.error {
+  top: 25px;
+  margin-left: 10%;
+}
+.account .accountStatus .tabsTable table tr.current td, .account .accountStatus .tabsTable table tr:nth-child(2).current td {
+  background-color: #f9f0e0 !important;
+}
+.account .accountVerifi {
+  font-family: 'AvenirMedium';
+}
+.account .accountVerifi .tabsTable .title {
+  border-width: 0;
+}
+.account .accountVerifi .tabsTable .table span {
+  display: block;
+}
+.account .accountVerifi .tabsTable .table .main {
+  border: none;
+  text-align: left;
+}
+.account .accountVerifi .tabsTable .table.verifiEmail {
+  border-bottom: 1px solid #c9c6c6;
+}
+.account .accountVerifi .tabsTable .table.verifiEmail .main {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  width: 75%;
+  font-size: 1.3em;
+}
+.account .accountVerifi .tabsTable .table.verifiAcct .main {
+  font-size: 1.3em;
+  margin: 15px 0 15px 0;
+  text-align: center;
+}
+.account .accountVerifi .tabsTable .table.verifiAcct .main input[type="checkbox"] {
+  margin: 15px;
+  margin-left: 0;
+}
+.account .accountVerifi .tabsTable .table.verifiAcct .main input[type="checkbox"] ~ label {
+  display: block;
+  font-family: 'AvenirLight';
+}
+.account .accountVerifi .tabsTable .table.verifiAcct dl {
+  text-align: left;
+}
+.account .accountVerifi .tabsTable .table.verifiAcct dl.verifi_follow dd {
+  width: 48%;
+}
+.account .accountVerifi .tabsTable .table.verifiAcct dl dt {
+  line-height: 40px;
+}
+.account .accountVerifi .tabsTable .table.verifiAcct dl dd {
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+.account .accountVerifi .tabsTable .table.verifiAcct dl span {
+  font-family: 'AvenirLight';
+}
+.account .accountVerifi .tabsTable .table.verifiAcct .clickUplaod {
+  position: relative;
+  margin: 30px auto;
+  background-color: #fff;
+  text-align: center;
+  line-height: 10;
+  border : 0.6px solid #ee9e05;
+  color: #ee9e05;
+  font-size: 1.2em;
+  font-family: 'FuturaBTBook';
+}
+.account .accountVerifi .tabsTable .table.verifiAcct .clickUplaod input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  opacity: 0;
+  line-height: 10;
+  width: 100%;
+}
+.account .accountSetting .main {
+  border: 1px solid #ee9e05;
+}
+.account .accountSetting .tabsMenu {
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: 50px;
+}
+.account .accountSetting .tabsMenu li.current {
+  color: #ee9e05 !important;
+  border-color: #ee9e05;
+  position: relative;
+}
+.account .accountSetting .tabsMenu li.current::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  background-color: white;
+  height: 5px;
+  bottom: -3px;
+  left: 0;
+}
+.account .accountSetting .tabsMenu li.current a {
+  color: #ee9e05 !important;
+}
+.account .accountSetting .tabsMenu li {
+  width: 32%;
+  background-color: white;
+  border: 1px solid #979797;
+  border-radius: 5px 5px 0 0;
+  border-bottom: none;
+  margin-bottom: -5px;
+  margin-right: 0;
+}
+.account .accountSetting .tabsMenu li:hover a{
+  color: #ee9e05 !important;
+}
+.account .accountSetting .tabsMenu li:nth-child(2) {
+  float: none;
+  display: inline-block;
+  margin: 0 2% 0 2%;
+}
+.account .accountSetting .tabsMenu li:nth-child(3) {
+  float: right;
+}
+.account .accountSetting label.error {
+  top: 50px;
+}
+.account .accountSetting .tabsWrap {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  padding: 0 30px;
+  line-height: 1.5;
+}
+.account .accountSetting .tabsWrap > li:last-child .assetsForm {
+  position: relative;
+}
+.account .accountSetting .tabsWrap > li:last-child .assetsForm li.clear:not(:first-child) {
+  margin-top: 0;
+  padding: 10px 0;
+  border-style: solid;
+  border-color: #b3b3b3;
+  border-bottom-width: 1px;
+}
+.account .accountSetting .tabsWrap > li:last-child .assetsForm li.clear:not(:last-child) > *:not(.dropMain) {
+  line-height: 30px;
+}
+.account .accountSetting .tabsWrap > li:last-child .assetsForm li.clear:not(:last-child) label {
+  display: inline-block;
+  width: 70%;
+}
+.account .accountSetting .tabsWrap > li:last-child .assetsForm li.clear:last-child {
+  border: 0;
+}
+.account .accountSetting .tabsWrap > li:last-child .assetsForm li.clear:last-child input {
+  margin-bottom: 0;
+}
+.account .accountSetting .tabsWrap > li:last-child .assetsForm li.clear:last-child input.error {
+  margin-bottom: 15px;
+}
+.account .accountSetting .tabsWrap > li:last-child .assetsForm li.clear:last-child input.error ~ label.error {
+  top: 35px;
+}
+.account .accountSetting .tabsWrap > li:last-child .assetsForm li.clear > .float_r {
+  display: block;
+  vertical-align: middle;
+  height: 30px;
+  width: 22%;
+}
+.account .accountSetting .tabsWrap > li:last-child .assetsForm li.clear > .float_r > * {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+  width: 45%;
+}
+.account .accountSetting .tabsWrap > li:last-child .alertPrice {
+  margin-bottom: -10px;
+  text-align: left;
+}
+.account .accountSetting .tabsWrap > li:last-child .alertPrice .drop_asse {
+  position: relative;
+  right: inherit;
+}
+.account .accountLog .tabsTable td {
+  vertical-align: middle;
+  line-height: 1.5;
+}
+.account .accountLog .tabsTable tr:first-child td {
+  background-color: #f9f0e0 !important;
+}
+.account .accountLog .tabsTable tr:nth-child(2) td {
+  font-family: 'AvenirMedium' !important;
+}
+.account .account_ex {
+  display: inline-block;
+  float: right;
+  font-size: 0.75em;
+  line-height: 20px;
+}
+.account_wrap .assetsForm li {
+  margin-bottom: 40px;
+}
+.account_wrap .content {
+  width: 85% !important;
+}
+
+/* account End */
+/* support */
+.support .tabsTable {
+  border-style: solid;
+  border-color: #b3b3b3;
+  border-width: 1px;
+  border-bottom-width: 0;
+}
+.support .tabsTable .title {
+  border-width: 0;
+}
+.support .tabsTable .table {
+  border-style: solid;
+  border-color: #b3b3b3;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+.support .tabsTable .table .main {
+  margin: 30px;
+  border: none;
+  text-align: left;
+  line-height: 1.5;
+}
+.support .tabsTable .content {
+  text-align: center;
+}
+.support .tabsTable .content form input, .support .tabsTable .content form textarea {
+  display: block;
+  width: 100%;
+}
+.support .tabsMenu li {
+  width: 32%;
+}
+.support .lostCard .dropdown li:hover {
+  background-color: #00aeef;
+}
+
+/* support End */
+/* warpper End*/
+/*
+PC style
+Version: v1
+Last Updated: 2015/03/09
+Author: Tzuchien Kao, oyan114@gmail.com
+*/
+/* base-css */
+/* 限制最大寬度 */
+.content {
+  width: 90%;
+}
+.wrapper .content {
+  margin-bottom: 150px;
+}
+.describe .content {
+  width: 100%;
+  margin-bottom: 50px !important;
+}
+.charting .content {
+  margin-bottom: 20px;
+}
+
+/* acct */
+.dropdown .dropdownSel li a span:first-child, .dropdown .dropdownSel li .charting .chart.data .chart_menu a:hover span:first-child, .charting .chart.data .chart_menu .dropdown .dropdownSel li a:hover span:first-child {
+  width: 85%;
+}
+.dropdown .dropdownSel li a span:last-child, .dropdown .dropdownSel li .charting .chart.data .chart_menu a:hover span:last-child, .charting .chart.data .chart_menu .dropdown .dropdownSel li a:hover span:last-child {
+  width: 15%;
+}
+
+/* acct End */
+/* base-css End */
+/* for mobile */
+.m_nav_menu, .wrap_nav_acct {
+  display: none;
+}
+
+.nav_signin, .nav_signup {
+  display: none;
+}
+
+/* for mobile End */
+/* header */
+.header {
+  padding: 0 15px;
+}
+.header .content, .header .content .nav {
+  height: inherit;
+}
+
+.nav {
+  line-height: 1.2;
+}
+.nav .nav_logo {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+}
+.nav .nav_logo .logo {
+  padding: 15px 15px 0 0;
+}
+.nav .nav_logo .logo img{
+  width: 150px;
+}
+.nav .nav_top, .nav .nav_bottom {
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+}
+.nav .nav_top {
+  background-color: #efefef;
+  line-height: 45px;
+}
+.nav .nav_bottom {
+  bottom: 20px;
+}
+.nav_menu li {
+  margin-right: 25px;
+}
+.nav_menu li a{
+  font-size: 1.2em;
+}
+.nav .nav_bottom .nav_menu li {
+  float: left;
+}
+.nav .nav_bottom .nav_menu li a, .nav .nav_bottom .nav_menu li .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .nav .nav_bottom .nav_menu li a:hover {
+  margin: 2px auto;
+  padding: 6px 10px;
+}
+
+.nav_menu li a.current, .nav_menu li a:hover {
+  display: block;
+  margin: 2px auto 0;
+  border-style: solid;
+  border-color: orange;
+  border-bottom-width: 4px;
+}
+
+/* header End */
+/* footer */
+.footer {
+  padding: 15px;
+}
+.footer .nav_co {
+  display: inline-block;
+}
+.footer .nav_logo {
+  padding-right: 35px;
+}
+.footer .copyright {
+  padding: 15px 0;
+  display: none;
+}
+
+/* footer End */
+/* warpper */
+/* index */
+.banner .hgroup {
+  margin: 0 50px;
+}
+.banner .hgroup h1 {
+  font-size: 2.25em;
+}
+.banner .hgroup h2 {
+  font-size: 1.125em;
+}
+
+.describe .des {
+  float: left;
+  margin-top: 45px;
+  width: 29.5%;
+}
+.describe .des:not(:nth-child(odd)) {
+  margin: 45px 30px 15px;
+}
+
+.marketView {
+  background-color: #f9f1e1;
+  text-align: center;
+  border-radius: 3px;
+}
+.marketView h1 {
+  display: none;
+}
+.marketView .market.data {
+  float: left;
+  text-align: center;
+  width: 16.66%;
+}
+.marketView .market.data dt.font_12 {
+  color: #9b9b9b;
+  font-family: 'FuturaBTLight';
+  margin-bottom: 10px;
+  font-size: 0.85em;
+}
+.marketView .market.data dd.font_32 {
+  color: #4a4a4a;
+  font-family: 'FuturaBTBook';
+  font-size: 1em;
+}
+.marketView.content {
+  margin-bottom: 20px !important;
+}
+
+.charting {
+  padding-bottom: 25px;
+  margin-top: 50px;
+}
+
+.charting .chart.data .chart_menu {
+  display: inline-block;
+  padding: 3px 15px;
+}
+.charting .chart.data .chart_menu a, .charting .chart.data .chart_menu a:hover {
+  float: left;
+  height: 40px;
+  margin-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px !important;
+  background-color: #f9f9f9;
+  color: #000;
+  font-family: 'AvenirLight';
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 2.2;
+}
+.charting .chart.data .chart_menu a.current {
+  color: #000;
+  background-color: white;
+  border: solid 1px #ee9e05;
+}
+.charting .chart.data .chart_menu a:last-child {
+  padding-right: 0;
+}
+.charting .chart.data .chart_dots {
+  height: 210px;
+}
+
+.liveTable .live.data {
+  float: left;
+  text-align: left;
+  width: calc(33.3% - 17px);
+}
+.liveTable .live.data:nth-child(2) {
+  margin: 0 25px;
+}
+.liveTable .live.data:last-child h1 {
+  opacity: 0;
+}
+.liveTable .live.data h1 {
+  margin: 0 10px 10px 0;
+}
+.liveTable .live.data table {
+  width: 100%;
+}
+
+.newsList {
+  padding-bottom: 25px;
+}
+.newsList .news.data .news_list {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.newsList .news.data .news_list:hover {
+  background-color: #fff;
+}
+.newsList .news.data .news_list .float_l {
+  margin-right: 15px;
+  width: 25%;
+  height: 31px;
+}
+.newsList .news.data .news_list .float_l h3 {
+  font-family: 'AvenirMedium';
+  font-size: 1.3em;
+  letter-spacing: 1.4px;
+  color: #9b9b9b;
+}
+
+/* index End */
+/* trade */
+.trade .tradeCalc.calc_three .tradeUnit {
+  width: 32%;
+}
+.trade .tradeCalc.calc_two .tradeUnit {
+  width: 49%;
+}
+.trade .tabsTable {
+  float: left;
+  width: 50%;
+}
+.trade .tabsTable:first-child {
+  padding-right: 15px;
+}
+.trade .tabsTable:last-child {
+  padding-left: 15px;
+}
+
+/* trade End */
+/* 各頁共用設定 */
+.account .content, .support .content {
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+/* 各頁共用設定 End */
+/* assets */
+.assets .assetsForm > li:not(.clear) {
+  display: inline-block;
+  width: 48%;
+  height: 30px;
+}
+.assets .assetsForm > li:not(.clear) label:not(.error) {
+  width: 30%;
+}
+.assets .assetsForm > li:not(.clear) > * {
+  float: left;
+  width: 70%;
+  height: 30px;
+  border-radius: 5px;
+  border-color: #CCCCCC;
+  font-family: 'AvenirLight';
+}
+.assets .assetsForm > li:nth-child(odd) {
+  float: left;
+}
+.assets .assetsForm label.error {
+  top: 50px;
+}
+.assets .assetsOverview .tabsTable {
+  float: left;
+  width: 50%;
+}
+.assets .assetsOverview .tabsTable:first-child {
+  padding-right: 15px;
+}
+.assets .assetsOverview .tabsTable:last-child {
+  padding-left: 15px;
+}
+.assets .assetsHistory .content {
+  width: 75%;
+}
+.assets .assetsHistory .tabsTable td:nth-child(3), .assets .assetsHistory .tabsTable td:nth-child(4), .assets .assetsHistory .tabsTable td:nth-child(5) {
+  width: 25%;
+}
+.assets .assetsDep .assetsForm > li:not(.clear) label:not(.error) {
+  text-align: right;
+}
+.assets .assetsDep .assetsForm > li:not(.clear) label.error {
+  top: 25px;
+  margin-left: 30%;
+}
+.assets .assetsWith .assetsForm > li {
+  min-height: 70px;
+}
+.assets .assetsWith .assetsForm > li:nth-child(even) {
+  float: right;
+}
+.assets .assetsWith .assetsForm > li > * {
+  float: none;
+  width: 100% !important;
+}
+
+/* assets End */
+/* warpper End*/
+
+@media screen and (max-width: 850px) {
+  .nav_menu li {
+    font-size: 6px;
+  }
+  .main {
+    overflow: visible;
+  }
+  .describe .des {
+    overflow: visible;
+    float: none !important;
+    width: 100%;
+    height: 150px;
+  }
+  .describe .des dd {
+    margin-left: 150px !important;
+  }
+  .describe .des .des_img {
+    float: left !important;
+  }
+  .describe .des .des_txt {
+    width: auto;
+  }
+  .describe .des:not(:nth-child(odd)) {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 885px) {
+  .assetsForm > li label {
+    text-align: center;
+    display: block;
+  }
+  .assetsForm > li label ~ .btn, .account .assetsForm > li:last-child label:not(.error), .account .assetsForm > li:last-child > *:not(label) {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 581px) and (max-width: 970px) {
+  /* base-css */
+  .triangle {
+    display: inline-block;
+    position: relative;
+    height: 24px;
+  }
+  .triangle.green:after, .orderForm.green a.triangle:after, .orderForm.green .charting .chart.data .chart_menu a.triangle:hover:after, .charting .chart.data .chart_menu .orderForm.green a.triangle:hover:after {
+    border-top-width: 0;
+    border-bottom-color: #9dc13e;
+  }
+  .triangle.red:after, .orderForm.red a.triangle:after, .orderForm.red .charting .chart.data .chart_menu a.triangle:hover:after, .charting .chart.data .chart_menu .orderForm.red a.triangle:hover:after {
+    border-bottom-width: 0;
+    border-top-color: #ea4f71;
+  }
+  .triangle:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    border-style: solid;
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    height: 0;
+    width: 0;
+  }
+
+  .charting {
+    display: none;
+  }
+
+  .trade .tradeFee {
+    width: 50%;
+    margin: 35px auto;
+  }
+  .trade .tradeFee p{
+    font-size: 1em;
+    margin: 0 0 0 10%;
+  }
+
+  /* base-css End */
+  .nav .nav_top {
+    position: relative;
+    float: right;
+    font-size: 0.75em;
+  }
+  .nav .nav_top .nav_setting > li {
+    padding: 0;
+    padding-left: 10px;
+  }
+  .nav .nav_top .nav_setting .nav_login, .nav .nav_top .nav_setting .nav_signout {
+    position: absolute;
+    top: 17px;
+    padding-left: 0;
+  }
+  .nav .nav_top .nav_setting .nav_f {
+    right: 65px;
+  }
+  .nav .nav_top .nav_setting .nav_signout, .nav .nav_top .nav_setting .nav_signup {
+    right: 0;
+  }
+  .nav .nav_top .nav_setting .nav_signin {
+    right: 60px;
+  }
+
+  .nav .nav_bala, .nav .nav_acct, .nav .nav_signin, .nav .nav_signup {
+    display: none;
+  }
+
+  /* header End */
+  /* warpper*/
+  /* index */
+  .banner {
+    height: 90vmin;
+  }
+  .banner .content {
+    height: 90vmin;
+  }
+
+  .describe .des {
+    text-align: center;
+  }
+  .describe .des dd {
+    margin-left: 0;
+  }
+  .describe .des .des_img {
+    margin: 0 auto;
+    float: none;
+  }
+
+  .marketView {
+    margin-bottom: 15px;
+    text-align: left;
+    background-color: #f9f1e1;
+  }
+  .marketView .market.data {
+    float: none;
+    width: inherit;
+  }
+  .marketView .market.data dt.font_12 {
+    float: left;
+    width: 26%;
+  }
+  .marketView .market.data dt.font_12 h2:after {
+    display: inline-block;
+    content: ':';
+  }
+
+  .liveTable {
+    margin-bottom: 35px;
+  }
+  .liveTable .live.data {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+  .liveTable .live.data:nth-child(2) {
+    margin: 0;
+  }
+  .liveTable .live.data:last-child h1 {
+    opacity: 0;
+  }
+  .liveTable .live.data h1 {
+    line-height: 1.5;
+    font-size: 1em;
+  }
+  .liveTable .live.data table {
+    margin-bottom: 15px;
+  }
+
+  /* index End */
+  /* wrapper */
+  .wrap_nav_acct .nav_top {
+    float: none;
+  }
+
+  /* trade */
+  .trade .tradeCalc.calc_three .tradeUnit {
+    width: 30%;
+  }
+  .trade .tradeCalc.calc_two .tradeUnit {
+    width: 48.5%;
+  }
+  .trade .tradeUnit:after, .trade .tradeUnit ~ span:after {
+    display: block;
+    content: '';
+    vertical-align: middle;
+    height: 0;
+    width: 0;
+  }
+  .trade .tradeUnit ~ span:after {
+    padding-bottom: 15px;
+  }
+  .trade .tradeUnit ~ span {
+    display: inline-block;
+    margin: 10px auto;
+  }
+  .trade .tabsTable {
+    float: left;
+    padding-bottom: 15px;
+    width: 100%;
+  }
+  .trade .tabsTable:first-child {
+    padding-right: 0;
+  }
+  .trade .tabsTable:last-child {
+    padding-left: 0;
+  }
+
+  /* trade End */
+  /* 各頁共用設定 */
+  .assets .content, .account .content, .support .content {
+    width: 100%;
+  }
+
+  /* 各頁共用設定 End */
+  /* assets */
+  .assets .content {
+    margin-bottom: 50px !important;
+  }
+  .assets .assetsForm > li:not(.clear) {
+    display: inline-block;
+    float: none;
+    margin-top: 0;
+    min-height: 90px;
+    width: 100%;
+  }
+  .assets .assetsForm > li:not(.clear) label {
+    width: 100%;
+  }
+  .assets .assetsForm > li:not(.clear) > * {
+    float: none;
+    width: 100%;
+  }
+  .assets .assetsForm > li.clear {
+    margin-top: 0;
+  }
+  .assets .assetsForm > li.clear > textarea {
+    height: 50px;
+  }
+  .assets .content > span {
+    margin-bottom: 30px;
+  }
+  .assets .tabsWrap {
+    /* 必填樣式 */
+  }
+  .assets .tabsWrap label.error {
+    margin-top: 0;
+    width: 100%;
+  }
+  .assets .tabsWrap label.error ~ .error, .assets .tabsWrap label.error ~ .error * {
+    padding: 5px 20px;
+    -webkit-border-radius: 16px;
+    border-radius: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #f8d6d6;
+  }
+  .assets .assetsOverview .tabsTable {
+    float: none;
+    width: 100%;
+  }
+  .assets .assetsOverview .tabsTable:first-child {
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+  .assets .assetsOverview .tabsTable:last-child {
+    padding-left: 0;
+  }
+  .assets .assetsHistory .tabsTable td:nth-child(3), .assets .assetsHistory .tabsTable td:nth-child(4) {
+    display: none;
+    width: inherit;
+  }
+  .assets .assetsHistory .tabsTable td:nth-child(2), .assets .assetsHistory .tabsTable td:nth-child(5) {
+    width: 27%;
+  }
+  .assets .assetsDep .assetsForm > li:not(.clear) label:not(.error) {
+    text-align: left;
+  }
+  .assets .assetsDep .assetsForm > li:not(.clear) label.error {
+    top: 50px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* assets End */
+  /* warpper End*/
+  .footer .nav_co {
+    display: block;
+  }
+  .footer .nav_logo {
+    margin-bottom: 15px;
+    width: 152px;
+    height: 60px;
+  }
+  .footer .nav_share {
+    overflow: hidden;
+    float: right;
+  }
+  .footer .nav_sub {
+    float: left;
+    width: 100%;
+  }
+  .footer .nav_sub .subnav_menu > li {
+    clear: both;
+    float: none;
+    padding: 5px 0;
+  }
+  .footer .nav_sub .subnav_menu > li > span{
+    font-family: 'AvenirMedium';
+    letter-spacing: 1.2px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 22px;
+  }
+  .footer .nav_sub .subnav_menu > li > ul{
+    font-family: 'AvenirLight';
+    letter-spacing: 1px;
+    font-size: 16px;
+  }
+  .footer .copyright {
+    display: none;
+    padding: 0;
+    padding-bottom: 15px;
+  }
+
+  .newsList {
+    padding: 0 15px 25px;
+  }
+
+  .newsList .news.data .news_list .float_l {
+    width: 100%;
+  }
+  .newsList .news.data .news_link div{
+    height: 80px;
+  }
+}
+}

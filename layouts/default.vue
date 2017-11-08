@@ -7,17 +7,24 @@
     <div class="content">
       <Navbar/>
       <Buttons/>
+      <UserForm/>
       <nuxt/>
+      <Bottom/>
     </div>
+
   </div>
 </template>
 <script>
 import Navbar from '~/components/Navbar.vue'
 import Buttons from '~/components/Buttons.vue'
+import Bottom from '~/components/Bottom.vue'
+import UserForm from '~/components/UserForm.vue'
 export default {
   components: {
     Navbar,
-    Buttons
+    Buttons,
+    Bottom,
+    UserForm
   }
 }
 </script>

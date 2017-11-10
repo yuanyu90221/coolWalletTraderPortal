@@ -37,6 +37,10 @@ module.exports = {
     {
       type: 'css',
       src: 'static/css/google-font.css'
+    },
+    {
+      type: 'css',
+      src: 'static/css/self.css'
     }
   ],
   /*
@@ -77,9 +81,9 @@ module.exports = {
         })
     ]
   },
-  // /**
-  //  * plugins
-  //  */
+  /**
+   * plugins
+   */
   modules: [
     '@nuxtjs/font-awesome'
   ]

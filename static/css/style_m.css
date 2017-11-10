@@ -54,7 +54,7 @@ body {
 }
 
 /* 清除浮動 */
-.clear {
+/* .clear {
   zoom: 1;
 }
 .clear:before, .clear:after {
@@ -63,7 +63,7 @@ body {
 }
 .clear:after {
   clear: both;
-}
+} */
 
 /* 重設實際寬高 End */
 /* 文字樣式 */
@@ -1232,7 +1232,7 @@ Author: Tzuchien Kao, oyan114@gmail.com
 /* 背景圖 End */
 /* base-css End */
 /* header */
-.header {
+/* .header {
   padding-top: 10px;
 }
 
@@ -1302,7 +1302,7 @@ Author: Tzuchien Kao, oyan114@gmail.com
 
 .sub_acct {
   background-color: transparent;
-}
+} */
 
 /* header End */
 /* footer */
@@ -1453,7 +1453,7 @@ Author: Tzuchien Kao, oyan114@gmail.com
 
 /* index End */
 /* trade */
-.trade .tradeUnit {
+/* .trade .tradeUnit {
   width: 100%;
 }
 .trade .tradeUnit:after, .trade .tradeUnit ~ span:after {
@@ -1469,11 +1469,11 @@ Author: Tzuchien Kao, oyan114@gmail.com
 .trade .tabsTable {
   padding-bottom: 15px;
   width: 100%;
-}
+} */
 
 /* trade End */
 /* 各頁共用設定 */
-.trade .tabsMenu li, .trade .tabsMenu li:hover, .trade .tabsMenu li:active, .trade .tabsMenu li.current, .support .tabsMenu li, .support .tabsMenu li:hover, .support .tabsMenu li:active, .support .tabsMenu li.current {
+/* .trade .tabsMenu li, .trade .tabsMenu li:hover, .trade .tabsMenu li:active, .trade .tabsMenu li.current, .support .tabsMenu li, .support .tabsMenu li:hover, .support .tabsMenu li:active, .support .tabsMenu li.current {
   display: table;
   height: 71px;
 }
@@ -1489,11 +1489,11 @@ Author: Tzuchien Kao, oyan114@gmail.com
   position: absolute;
   top: 50px;
   width: 100%;
-}
+} */
 
 /* 各頁共用設定 End */
 /* assets */
-.assets .assetsForm > li:not(.clear) {
+/* .assets .assetsForm > li:not(.clear) {
   display: inline-block;
   float: none;
   margin-top: 0;
@@ -1537,11 +1537,11 @@ Author: Tzuchien Kao, oyan114@gmail.com
 }
 .assets .assetsWith .tabsWrap, .assets .assetsDep .content {
   width: inherit;
-}
+} */
 
 /* assets End */
 /* account */
-.account .accountSetting .dropdown {
+/* .account .accountSetting .dropdown {
   padding: 5px 0;
 }
 .account .accountSetting .dropdown .dropInput {
@@ -1564,11 +1564,11 @@ Author: Tzuchien Kao, oyan114@gmail.com
 }
 .account .accountVerifi .tabsTable .table.verifiAcct .btn {
   margin: 0 auto;
-}
+} */
 
 /* account End */
 /* warpper End*/
-@media screen and (max-width: 359px) {
+/* @media screen and (max-width: 359px) {
   html, body {
     min-width: 360px;
   }
@@ -1589,15 +1589,15 @@ Author: Tzuchien Kao, oyan114@gmail.com
   .assets .assetsOverview .assets_table {
     width: inherit;
   }
-}
+} */
 /* for PC */
-.nav .nav_bala, .nav .nav_acct, .nav .nav_signin, .nav .nav_signup {
+/* .nav .nav_bala, .nav .nav_acct, .nav .nav_signin, .nav .nav_signup {
   display: none;
 }
 
 .nav_bottom, .charting {
   display: none;
-}
+} */
 
 /* for PC End */
 }

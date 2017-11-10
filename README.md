@@ -1,6 +1,6 @@
-# y
+# Trade Portal with nuxt
 
-> y
+> Trade Portal with nuxt
 
 ## Build Setup
 

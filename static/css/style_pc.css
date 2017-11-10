@@ -53,7 +53,7 @@ body {
 }
 
 /* 清除浮動 */
-.clear {
+/* .clear {
   zoom: 1;
 }
 .clear:before, .clear:after {
@@ -62,12 +62,12 @@ body {
 }
 .clear:after {
   clear: both;
-}
+} */
 
 /* 重設實際寬高 End */
 /* 文字樣式 */
 /* 字體大小 */
-.font_12 {
+/* .font_12 {
   font-size: 0.75em;
 }
 
@@ -81,35 +81,35 @@ body {
 
 .font_32 {
   font-size: 2em;
-}
+} */
 
 /* 字體粗細 */
-.font_bold, .nav .nav_bottom .nav_menu li a:hover, .nav .nav_bottom .nav_menu li .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .nav .nav_bottom .nav_menu li a:hover, .nav .nav_bottom .nav_menu li a.current {
+/* .font_bold, .nav .nav_bottom .nav_menu li a:hover, .nav .nav_bottom .nav_menu li .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .nav .nav_bottom .nav_menu li a:hover, .nav .nav_bottom .nav_menu li a.current {
   font-weight: bold;
 }
 
 .font_normal {
   font-weight: normal;
-}
+} */
 
 /* 字體顏色 */
-.error, .red, .orderForm.red a, .orderForm.red .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .orderForm.red a:hover {
+/* .error, .red, .orderForm.red a, .orderForm.red .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .orderForm.red a:hover {
   color: #ed2123;
 }
 
 .green, .orderForm.green a, .orderForm.green .charting .chart.data .chart_menu a:hover, .charting .chart.data .chart_menu .orderForm.green a:hover {
   color: #00aa00;
-}
+} */
 
 /* 全站超連結樣式 */
-a, a:hover, .charting .chart.data .chart_menu a:hover {
+/* a, a:hover, .charting .chart.data .chart_menu a:hover {
   display: block;
   color: black;
   text-decoration: none;
-}
+} */
 
 /* 表單文字 */
-label.error {
+/* label.error {
   position: absolute;
   top: 30px;
   left: 0;
@@ -118,10 +118,10 @@ label.error {
   line-height: 1.2;
   text-align: left;
   min-height: 30px;
-}
+} */
 
 /* 訊息框 */
-.confirmAlert {
+/* .confirmAlert {
   display: none;
   margin-bottom: 15px;
   padding: 15px;
@@ -129,11 +129,11 @@ label.error {
   border-color: #b3b3b3;
   border-width: 1px;
   background-color: #ece7d7;
-}
+} */
 
 /* 文字樣式 End */
 /* 按鈕樣式 */
-.btn {
+/* .btn {
   padding: 5px 20px;
   border: 1px solid #ee9e05;
   width: 140px;
@@ -162,11 +162,11 @@ a.btn, .charting .chart.data .chart_menu a.btn:hover {
 }
 a.btn.blue, .charting .chart.data .chart_menu a.btn.blue:hover {
   margin: 15px 0;
-}
+} */
 
 /* 按鈕樣式 End */
 /* 表單樣式 */
-textarea, select, input {
+/* textarea, select, input {
   font-size: 1em;
 }
 
@@ -197,10 +197,10 @@ input[type="checkbox"] {
 input[type="submit"] {
   text-align: center;
   width: 40%;
-}
+} */
 
 /* 必填樣式 */
-input[type="text"].hidden {
+/* input[type="text"].hidden {
   position: absolute;
   top: 0;
   opacity: 0;
@@ -216,25 +216,25 @@ input[type="text"].hidden ~ label.error ~ .dropdown, input[type="text"].hidden ~
 input[type="text"].hidden ~ label.error ~ .dropdown {
   -webkit-border-radius: 16px;
   border-radius: 16px;
-}
+} */
 
 /* 必填樣式 End */
 /* 表單樣式 End */
 /* 對齊 */
-.float_l {
+/* .float_l {
   float: left;
 }
 
 .float_r {
   float: right;
-}
+} */
 
 /* 對齊 End */
 /* 限制最大寬度 */
-.content {
+/* .content {
   margin: 0 auto;
   width: 100%;
-}
+} */
 
 .main {
   overflow: hidden;

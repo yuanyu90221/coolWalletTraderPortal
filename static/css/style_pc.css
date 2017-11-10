@@ -1429,7 +1429,7 @@ Author: Tzuchien Kao, oyan114@gmail.com
 }
 .nav .nav_logo {
   display: inline-block;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
 }
 .nav .nav_logo .logo {

@@ -1,5 +1,16 @@
 body, html, .main {
-  min-height: 100% !important;
+  /* min-height: 100% !important; */
   min-width: 100% !important;
-  margin:0 !important;
+  /* margin:0 !important; */
+}
+.basic {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.header.clear {
+  flex: 1;
+  /* flex-grow: 1; */
+
+
 }

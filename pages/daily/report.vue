@@ -1,3 +1,3 @@
 <template>
-  <div>Daily Report</div>
+  <div class="container-fluid">Daily Report</div>
 </template>

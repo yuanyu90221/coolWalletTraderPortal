@@ -10,9 +10,9 @@
       <li class="nav_last">
 
       </li>
-      <li class="nav_acct">
+      <!-- <li class="nav_acct">
         <a href="" class="main_acct"></a>
-      </li>
+      </li> -->
 
     </ul>
   </ul>

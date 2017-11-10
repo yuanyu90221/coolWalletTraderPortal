@@ -7,7 +7,6 @@
       <nuxt-link @click.native="changeRoute" class="btn btn-warning" to="/daily/transactionFee" style="display:inline;">
         DailyFee
       </nuxt-link>
-
     </li>
   </ul>
 </template>

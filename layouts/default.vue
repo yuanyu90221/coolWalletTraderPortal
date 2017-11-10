@@ -1,11 +1,12 @@
 <template>
-  <div>
+  <div class="basic">
     <div class="header clear main">
       <header>
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:600,400,300" rel="stylesheet" type="text/css">
         <!-- <link rel='icon' type='image/x-icon' href: '~/assets/favicon.png'> -->
       </header>
       <Navbar/>
+      <Buttons/>
       <nuxt/>
     </div>
     <Bottom/>

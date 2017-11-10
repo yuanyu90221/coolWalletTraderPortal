@@ -11,6 +11,4 @@ body, html, .main {
 .header.clear {
   flex: 1;
   /* flex-grow: 1; */
-
-
 }

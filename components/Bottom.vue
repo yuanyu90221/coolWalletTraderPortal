@@ -35,7 +35,7 @@ $gap: 10px;
   background-color: $bg-color;
   padding: 0;
   width: 100% !important;
-
+  min-height: 200px;
 }
 .clearDef {
   margin: 20px;

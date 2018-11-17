@@ -1,4 +1,10 @@
 const webpack = require('webpack')
+// set up session for the traderWeb
+const bodyParser = require('body-parser')
+const session = require('express-session')
+// for additional route
+const resolve = require('path').resolve
+
 module.exports = {
   /*
   ** Headers of the page
@@ -71,7 +77,7 @@ module.exports = {
     /**
      * for boostrap jquery
      */
-    vendor: ['jquery', 'bootstrap'],
+    vendor: ['jquery', 'bootstrap', 'axios'],
     plugins: [
         // set shortcut as global for bootstrap
         new webpack.ProvidePlugin({
@@ -86,5 +92,29 @@ module.exports = {
    */
   modules: [
     '@nuxtjs/font-awesome'
+  ],
+  serverMiddleware: [
+    // body-parser middleware change context to json
+    bodyParser.json(),
+    // session middleware setup session config with express session
+    session({
+      secret: 'my-secret',
+      resave: false,
+      saveUninitialized: false,
+      cookie: { maxAge: 60000 }
+    }),
+    // set up api middleware
+    // '~/api'
   ]
+  // ,
+  // router: {
+  //   extendRoutes(routes) {
+  //     routes.push({
+  //       name: 'api',
+  //       path: '/api'
+
+  //     })
+  //   }
+  // }
+
 }

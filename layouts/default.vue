@@ -22,6 +22,7 @@ export default {
     Navbar,
     Buttons,
     Bottom
-  }
+  },
+  scrollToTop: true
 }
 </script>

@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@nuxtjs/font-awesome": "^1.0.2",
-    "axios": "^1.6.0",
+    "axios": "^1.7.4",
     "body-parser": "^1.20.2",
     "bootstrap": "^3.3.7",
     "express-session": "^1.15.6",

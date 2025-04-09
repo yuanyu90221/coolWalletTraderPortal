@@ -20,7 +20,7 @@
     "express-session": "^1.18.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.0",
-    "koa": "^2.15.4",
+    "koa": "^2.16.1",
     "mongoose": "^8.9.5",
     "nuxt": "^3.16.0",
     "path": "^0.12.7"

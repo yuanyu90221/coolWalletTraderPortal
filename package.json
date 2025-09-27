@@ -22,7 +22,7 @@
     "jquery": "^3.5.0",
     "koa": "^3.0.1",
     "mongoose": "^8.9.5",
-    "nuxt": "^3.16.0",
+    "nuxt": "^3.19.0",
     "path": "^0.12.7"
   },
   "devDependencies": {
